@@ -1,6 +1,6 @@
 {
-    "name": "dingo-october/api",
-    "description": "A RESTful API package for the Laravel and Lumen frameworks.",
+    "name": "octobercms/api",
+    "description": "A RESTful API package for the OctoberCMS framework.",
     "keywords": [
         "api",
         "october",
@@ -18,7 +18,8 @@
         "dingo/blueprint": "^0.2",
         "illuminate/routing": "^5.1",
         "illuminate/support": "^5.1",
-        "league/fractal": "^0.17"
+        "league/fractal": "^0.17",
+        "tymon/jwt-auth": "1.0.0-rc.1"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "~2",
@@ -41,7 +42,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dingo\\Api\\": "src/"
+            "October\\Api\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -49,7 +50,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Dingo\\Api\\Tests\\": "tests/"
+            "October\\Api\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -58,10 +59,10 @@
         },
         "laravel": {
             "providers": [
-                "Dingo\\Api\\Provider\\LaravelServiceProvider"
+                "October\\Api\\Provider\\LaravelServiceProvider"
             ],
             "aliases": {
-                "API": "Dingo\\Api\\Facade\\API"
+                "API": "October\\Api\\Facade\\API"
             }
         }
     },
